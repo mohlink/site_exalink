@@ -15,7 +15,7 @@
       region:"Featured images of EXALINK activities",controls:"Slideshow controls",previous:"Previous image",next:"Next image",pause:"Pause automatic slideshow",play:"Resume automatic slideshow",view:"View image",of:"of",
       slides:[
         {eyebrow:"IT & NETWORKING",title:"Infrastructure that keeps you connected.",alt:"Professional server racks with connected network equipment"},
-        {eyebrow:"TELECOMMUNICATIONS",title:"Business communications that work.",alt:"Professional IP desk telephone"},
+        {eyebrow:"TELECOMMUNICATIONS",title:"VoIP, LTE/5G and Wi-Fi for business and industry.",alt:"Professional telecommunications and wireless connectivity"},
         {eyebrow:"SMART SYSTEMS & INTEGRATION",title:"Automation made to fit your operations.",alt:"Industrial control panel with electronic modules and wiring"},
         {eyebrow:"ENGINEERING & INNOVATION",title:"Exploring tomorrow’s connected systems.",alt:"Mobile robot equipped with sensors in a laboratory"}
       ]
@@ -24,7 +24,7 @@
       region:"Photos illustrant les activités d’EXALINK",controls:"Commandes du diaporama",previous:"Image précédente",next:"Image suivante",pause:"Suspendre le défilement automatique",play:"Reprendre le défilement automatique",view:"Afficher l’image",of:"sur",
       slides:[
         {eyebrow:"INFORMATIQUE ET RÉSEAUX",title:"Des infrastructures qui vous connectent.",alt:"Baies de serveurs et équipements réseau interconnectés"},
-        {eyebrow:"TÉLÉCOMMUNICATIONS",title:"Des communications d’entreprise efficaces.",alt:"Téléphone IP de bureau professionnel"},
+        {eyebrow:"TÉLÉCOMMUNICATIONS",title:"VoIP, LTE/5G et Wi-Fi pour les entreprises et les mines.",alt:"Équipements de télécommunications et de connectivité sans fil"},
         {eyebrow:"SYSTÈMES INTELLIGENTS ET INTÉGRATION",title:"Une automatisation adaptée à vos opérations.",alt:"Armoire de commande industrielle avec modules électroniques et câblage"},
         {eyebrow:"INGÉNIERIE ET INNOVATION",title:"Explorer les systèmes connectés de demain.",alt:"Robot mobile équipé de capteurs dans un laboratoire"}
       ]
