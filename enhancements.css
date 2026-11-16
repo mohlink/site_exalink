@@ -1,0 +1,41 @@
+/* EXALINK — visual enhancements, v3 */
+.feature-band{background:linear-gradient(120deg,#071d31 0%,#123b53 62%,#092337 100%);color:white;padding:64px 0 72px;position:relative;overflow:hidden;isolation:isolate}
+.feature-band:before{content:"";position:absolute;inset:auto -150px -360px auto;width:620px;height:620px;border-radius:50%;background:#00cce821;filter:blur(70px);z-index:-1;pointer-events:none}
+.feature-heading{display:flex;justify-content:space-between;align-items:end;gap:22px;margin-bottom:30px}
+.feature-heading small{display:block;color:#70e2f2;font-size:12px;letter-spacing:.19em;font-weight:850;margin-bottom:11px}
+.feature-heading h2{color:white;font-size:clamp(27px,3vw,41px);max-width:720px;margin:0}
+.feature-heading>a{font-size:13px;font-weight:700;color:#b2dde6;white-space:nowrap;padding-bottom:4px}
+.feature-heading>a:hover{color:white}
+.feature-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.feature-card{display:flex;position:relative;flex-direction:column;padding:28px;border:1px solid #467187;border-radius:15px;background:linear-gradient(145deg,#1d5269b5,#12344cdb);min-height:269px;color:white;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.feature-card:after{content:"";height:4px;background:#43ddec;position:absolute;bottom:0;left:0;right:0;transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.feature-card:hover,.feature-card:focus-visible{transform:translateY(-6px);border-color:#66deeb;box-shadow:0 24px 50px #0015228a}
+.feature-card:hover:after,.feature-card:focus-visible:after{transform:scaleX(1)}
+.feature-card-top{display:flex;align-items:start;justify-content:space-between;margin-bottom:19px}
+.feature-symbol{display:grid;place-items:center;width:56px;height:56px;border:1px solid #75dcea80;border-radius:12px;background:#16465e;color:#85eaf3}
+.feature-symbol svg{height:32px;width:32px;stroke-width:2}
+.feature-index{font-weight:850;font-size:36px;line-height:1;color:#8beaf4;letter-spacing:-.045em}
+.feature-card h3{font-size:clamp(20px,2vw,26px);color:white;margin:0 0 10px}
+.feature-card p{color:#d4e8ef;font-size:14px;line-height:1.65;margin:0 0 21px}
+.feature-link{display:flex;align-items:center;justify-content:space-between;color:#80e8ef;font-size:12px;font-weight:800;margin-top:auto;padding-top:14px;border-top:1px solid #608298}
+.feature-link b{font-size:24px;font-weight:450;line-height:1;transition:transform .25s}
+.feature-card:hover .feature-link b{transform:translate(4px,-4px)}
+@keyframes exa-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes exa-photo{from{transform:scale(1)}to{transform:scale(1.06)}}
+@keyframes exa-pulse{0%,100%{box-shadow:0 0 0 5px #00bad329}50%{box-shadow:0 0 0 12px #00bad307}}
+@keyframes exa-enter{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-media::before{animation:exa-photo 18s ease-in-out infinite alternate}
+.hero-badge{animation:exa-float 5s ease-in-out infinite}
+.hero-badge .dot{animation:exa-pulse 2.7s ease-in-out infinite}
+.hero-copy .kicker{animation:exa-enter .65s both}
+.hero-copy h1{animation:exa-enter .75s .12s both}
+.hero-copy .intro{animation:exa-enter .75s .24s both}
+.hero-copy .actions{animation:exa-enter .75s .36s both}
+.service-card .service-art{transition:filter .45s}
+.service-card:hover .service-art{filter:brightness(1.15)}
+.motion-ready .reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.75,.2,1)}
+.motion-ready .reveal.visible{opacity:1;transform:translateY(0)}
+.motion-ready .feature-card:nth-child(2){transition-delay:100ms}
+.motion-ready .feature-card:nth-child(3){transition-delay:200ms}
+@media(max-width:780px){.feature-band{padding:56px 0 60px}.feature-heading{align-items:start;flex-direction:column;gap:10px}.feature-cards{grid-template-columns:1fr}.feature-card{min-height:220px}.feature-card-top{margin-bottom:11px}}
+@media(prefers-reduced-motion:reduce){.hero-media::before,.hero-badge,.hero-badge .dot,.hero-copy .kicker,.hero-copy h1,.hero-copy .intro,.hero-copy .actions{animation:none!important}.motion-ready .reveal{opacity:1!important;transform:none!important;transition:none!important}.feature-card,.feature-card:after,.feature-link b,.service-card .service-art{transition:none!important}}
