@@ -120,9 +120,14 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
 @media(max-width:780px){.wrap{width:min(100% - 36px,1180px)}.header{height:auto;min-height:74px}.header-inner{flex-wrap:wrap;gap:12px;padding:14px 0}.nav{order:3;overflow-x:auto;width:100%;gap:23px;margin:0;padding:4px 0;white-space:nowrap}.header-cta{margin-left:auto}.hero-layout{grid-template-columns:1fr}.hero-copy{padding:65px 24px}.hero-media{min-height:390px}.value-grid{grid-template-columns:1fr}.value{padding:19px 0}.value+.value{border-left:none;border-top:1px solid #254156;padding:19px 0}.card-grid{grid-template-columns:1fr}.service-art{height:230px}.solutions-layout,.innovation-grid{grid-template-columns:1fr;gap:40px}.solutions-image{min-height:350px}.solutions-overlap{bottom:-14px;right:16px}.steps{grid-template-columns:1fr;gap:12px}.contact-content{flex-direction:column;align-items:start}}
 @media(max-width:480px){.brand{font-size:22px}.header-cta{display:none}.hero h1{font-size:43px}.hero-copy{padding:55px 19px}.hero-media{min-height:305px}.hero-badge{top:18px;left:17px}.media-caption{bottom:20px;left:18px}.media-caption strong{font-size:17px}.media-symbol{width:45px;height:45px}.section{padding:69px 0}.solutions-image{min-height:290px}.innovation{padding:67px 0}.footer-content{align-items:start;flex-direction:column;gap:11px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Clear industrial telecommunications specialization — v6 */
+#service-telecom{border-color:#40bcd0;box-shadow:0 16px 42px #0e829a20}
+#service-telecom .service-content h3{margin-bottom:9px}
+.industry-highlight{width:fit-content;max-width:100%;padding:7px 10px;border-radius:6px;background:#dff7fa;color:#006d83;font-size:10px;font-weight:850;letter-spacing:.095em;line-height:1.6;margin-bottom:13px}
 </style>
-<link rel="stylesheet" href="enhancements.css">
-<link rel="stylesheet" href="slider.css">
+<link rel="stylesheet" href="enhancements.css?v=6">
+<link rel="stylesheet" href="slider.css?v=6">
 </head>
 <body>
 <header class="header">
@@ -224,6 +229,7 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
           <div class="service-art" role="img" aria-label="Illustrative photograph of professional communication technology"><span class="service-no">02</span></div>
           <div class="service-content">
             <h3 data-t="teleTitle">Telecommunications</h3>
+            <div class="industry-highlight" data-t="teleHighlight">LTE / 5G / INDUSTRIAL WI-FI / MINING</div>
             <p data-t="teleText">Business communications and wired or wireless networks, including LTE, 5G and Wi-Fi solutions for industrial and mining environments.</p>
             <ul><li data-t="tele1">VoIP and business telephony</li><li data-t="tele2">Wired and wireless networks for industry and mines</li><li data-t="tele3">LTE/5G and industrial Wi-Fi connectivity</li><li data-t="tele4">Network integration and communications infrastructure</li></ul>
           </div>
@@ -314,7 +320,7 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
       servicesLead:"We support businesses and organizations with practical technology services, from day-to-day IT to connected systems and integrated communications.",
       itTitle:"IT & Networking",itText:"Dependable infrastructure, well-designed networks and technical support to keep your team connected.",
       it1:"Wired networks and business Wi-Fi",it2:"Hardware and infrastructure support",it3:"Configuration, maintenance and troubleshooting",
-      teleTitle:"Telecommunications",teleText:"Business communications and wired or wireless networks, including LTE, 5G and Wi-Fi solutions for industrial and mining environments.",
+      teleTitle:"Telecommunications",teleText:"Business communications and wired or wireless networks, including LTE, 5G and Wi-Fi solutions for industrial and mining environments.",teleHighlight:"LTE / 5G / INDUSTRIAL WI-FI / MINING",
       tele1:"VoIP and business telephony",tele2:"Wired and wireless networks for industry and mines",tele3:"LTE/5G and industrial Wi-Fi connectivity",tele4:"Network integration and communications infrastructure",
       autoTitle:"Smart Systems & Integration",autoText:"Thoughtful integration of connected technologies to simplify and support business processes.",
       auto1:"Connected devices and IoT",auto2:"Automation and monitoring concepts",auto3:"Custom systems integration",
@@ -350,7 +356,7 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
       servicesLead:"Nous accompagnons les entreprises et les organisations dans leurs besoins informatiques, leurs communications professionnelles et l'intégration de systèmes connectés.",
       itTitle:"Informatique et réseaux",itText:"Des infrastructures fiables, des réseaux bien conçus et un soutien technique pour vos activités.",
       it1:"Réseaux filaires et Wi-Fi d'entreprise",it2:"Soutien matériel et infrastructure TI",it3:"Configuration, maintenance et dépannage",
-      teleTitle:"Télécommunications",teleText:"Des communications professionnelles et des réseaux filaires ou sans fil, notamment LTE, 5G et Wi-Fi, adaptés aux environnements industriels et miniers.",
+      teleTitle:"Télécommunications",teleText:"Des communications professionnelles et des réseaux filaires ou sans fil, notamment LTE, 5G et Wi-Fi, adaptés aux environnements industriels et miniers.",teleHighlight:"LTE / 5G / WI-FI INDUSTRIEL / MINES",
       tele1:"Téléphonie IP et VoIP d'entreprise",tele2:"Réseaux filaires et sans fil pour l'industrie et les mines",tele3:"Connectivité LTE/5G et Wi-Fi industriel",tele4:"Intégration de réseaux et infrastructures de communication",
       autoTitle:"Systèmes intelligents et intégration",autoText:"L'intégration de technologies connectées pour simplifier et soutenir vos processus d'affaires.",
       auto1:"Objets connectés et IoT",auto2:"Concepts d'automatisation et de supervision",auto3:"Intégration de systèmes personnalisés",
@@ -396,8 +402,8 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
   setLanguage(language);
 })();
 </script>
-<script src="motion.js" defer></script>
-<script src="slider.js" defer></script>
+<script src="motion.js?v=6" defer></script>
+<script src="slider.js?v=6" defer></script>
 <script>
 (function(){
 const values={
