@@ -121,6 +121,7 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
 @media(max-width:480px){.brand{font-size:22px}.header-cta{display:none}.hero h1{font-size:43px}.hero-copy{padding:55px 19px}.hero-media{min-height:305px}.hero-badge{top:18px;left:17px}.media-caption{bottom:20px;left:18px}.media-caption strong{font-size:17px}.media-symbol{width:45px;height:45px}.section{padding:69px 0}.solutions-image{min-height:290px}.innovation{padding:67px 0}.footer-content{align-items:start;flex-direction:column;gap:11px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 </style>
+<link rel="stylesheet" href="enhancements.css">
 </head>
 <body>
 <header class="header">
@@ -156,22 +157,40 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
       </div>
     </div>
   </section>
-  <div class="value-strip">
-    <div class="wrap value-grid">
-      <div class="value"><strong class="value-num">01</strong><span class="value-text" data-t="value1">Reliable infrastructure & network solutions</span></div>
-      <div class="value"><strong class="value-num">02</strong><span class="value-text" data-t="value2">Connected communications for professionals</span></div>
-      <div class="value"><strong class="value-num">03</strong><span class="value-text" data-t="value3">Integrated technology adapted to your needs</span></div>
+  <section class="feature-band" aria-labelledby="features-heading">
+    <div class="wrap">
+      <div class="feature-heading reveal">
+        <div><small data-feature="eyebrow">YOUR CONNECTED FOUNDATION</small><h2 id="features-heading" data-feature="heading">Three specialties. One connected vision.</h2></div>
+        <a href="#services" data-feature="explore">Explore our solutions ↘</a>
+      </div>
+      <div class="feature-cards">
+        <a href="#service-it" class="feature-card reveal" data-feature-aria="aria1">
+          <div class="feature-card-top"><span class="feature-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="36" height="13" rx="3"/><rect x="6" y="29" width="36" height="13" rx="3"/><path d="M13 12h.01M13 35h.01M20 12h14M20 35h14M24 19v10"/></svg></span><span class="feature-index">01</span></div>
+          <h3 data-feature="title1">IT & Networking</h3><p data-feature="body1">Reliable infrastructure and connected business networks.</p>
+          <span class="feature-link"><span data-feature="link">View service</span><b aria-hidden="true">↗</b></span>
+        </a>
+        <a href="#service-telecom" class="feature-card reveal" data-feature-aria="aria2">
+          <div class="feature-card-top"><span class="feature-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h-5a4 4 0 0 0-4 4c0 16.5 13.5 30 30 30a4 4 0 0 0 4-4v-5l-11-4-5 6c-5-2.5-8.5-6-11-11l6-5z"/><path d="M29 9c5.5 0 10 4.5 10 10M29 15c2.2 0 4 1.8 4 4"/></svg></span><span class="feature-index">02</span></div>
+          <h3 data-feature="title2">Telecommunications</h3><p data-feature="body2">Professional communications that keep teams connected.</p>
+          <span class="feature-link"><span data-feature="link">View service</span><b aria-hidden="true">↗</b></span>
+        </a>
+        <a href="#service-integration" class="feature-card reveal" data-feature-aria="aria3">
+          <div class="feature-card-top"><span class="feature-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="17" width="14" height="14" rx="3"/><path d="M24 6v11M24 31v11M6 24h11M31 24h11M10 10l7 7M31 31l7 7M38 10l-7 7M17 31l-7 7"/><circle cx="24" cy="24" r="3"/></svg></span><span class="feature-index">03</span></div>
+          <h3 data-feature="title3">Smart Systems & Integration</h3><p data-feature="body3">Integrated technology adapted to the way you operate.</p>
+          <span class="feature-link"><span data-feature="link">View service</span><b aria-hidden="true">↗</b></span>
+        </a>
+      </div>
     </div>
-  </div>
+  </section>
   <section class="section" id="services">
     <div class="wrap">
-      <div class="section-top">
+      <div class="section-top reveal">
         <div class="overline" data-t="servicesEyebrow">OUR CORE SERVICES</div>
         <h2 data-t="servicesTitle">One technology partner. Connected solutions.</h2>
         <p class="section-lead" data-t="servicesLead">We support businesses and organizations with practical technology services, from day-to-day IT to connected systems and integrated communications.</p>
       </div>
       <div class="card-grid">
-        <article class="service-card">
+        <article class="service-card reveal" id="service-it">
           <div class="service-art" role="img" aria-label="Illustrative photograph of network infrastructure"><span class="service-no">01</span></div>
           <div class="service-content">
             <h3 data-t="itTitle">IT & Networking</h3>
@@ -179,7 +198,7 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
             <ul><li data-t="it1">Wired networks and business Wi-Fi</li><li data-t="it2">Hardware and infrastructure support</li><li data-t="it3">Configuration, maintenance and troubleshooting</li></ul>
           </div>
         </article>
-        <article class="service-card">
+        <article class="service-card reveal" id="service-telecom">
           <div class="service-art" role="img" aria-label="Illustrative photograph of professional communication technology"><span class="service-no">02</span></div>
           <div class="service-content">
             <h3 data-t="teleTitle">Telecommunications</h3>
@@ -187,7 +206,7 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
             <ul><li data-t="tele1">VoIP and business telephony</li><li data-t="tele2">Communication solutions for workplaces</li><li data-t="tele3">Network connectivity and integration</li></ul>
           </div>
         </article>
-        <article class="service-card">
+        <article class="service-card reveal" id="service-integration">
           <div class="service-art" role="img" aria-label="Illustrative photograph of electronic systems"><span class="service-no">03</span></div>
           <div class="service-content">
             <h3 data-t="autoTitle">Smart Systems & Integration</h3>
@@ -200,7 +219,7 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
   </section>
   <section class="section solutions" id="approach">
     <div class="wrap solutions-layout">
-      <div class="solutions-image" role="img" aria-label="Illustrative photograph of a modern business environment">
+      <div class="solutions-image reveal" role="img" aria-label="Illustrative photograph of a modern business environment">
         <div class="solutions-overlap"><strong data-t="overlapTitle">Practical by design.</strong><span data-t="overlapCaption">Technology with a clear purpose.</span></div>
       </div>
       <div>
@@ -222,7 +241,7 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
         <h2 data-t="innovationTitle">Curiosity beyond the everyday.</h2>
         <p data-t="innovationText">Alongside our business technology services, our technical interests include advanced connected systems, mobile robotics, autonomous navigation and environmental mapping. These areas reflect our engineering-minded approach to exploration and innovation.</p>
       </div>
-      <div class="innovation-panel">
+      <div class="innovation-panel reveal">
         <div class="capability"><div class="capability-icon" aria-hidden="true">◇</div><div><strong data-t="cap1">Mobile robotics</strong><span data-t="cap1sub">Systems and mobility</span></div></div>
         <div class="capability"><div class="capability-icon" aria-hidden="true">↗</div><div><strong data-t="cap2">Autonomous navigation</strong><span data-t="cap2sub">Intelligent movement and control</span></div></div>
         <div class="capability"><div class="capability-icon" aria-hidden="true">▧</div><div><strong data-t="cap3">Mapping & exploration</strong><span data-t="cap3sub">Understanding complex environments</span></div></div>
@@ -231,15 +250,15 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
   </section>
   <section class="section process">
     <div class="wrap">
-      <div class="section-top">
+      <div class="section-top reveal">
         <div class="overline" data-t="processEyebrow">HOW WE THINK</div>
         <h2 data-t="processTitle">Technology choices should be simple to understand.</h2>
         <p class="section-lead" data-t="processLead">We believe in a straightforward approach that brings the right systems together without unnecessary complexity.</p>
       </div>
       <div class="steps">
-        <div class="step"><b>01 / <span data-t="stepOneLabel">DISCOVER</span></b><h3 data-t="stepOneTitle">Understand</h3><p data-t="stepOneDesc">Identify business goals and technical priorities.</p></div>
-        <div class="step"><b>02 / <span data-t="stepTwoLabel">CONNECT</span></b><h3 data-t="stepTwoTitle">Integrate</h3><p data-t="stepTwoDesc">Bring together appropriate tools and technologies.</p></div>
-        <div class="step"><b>03 / <span data-t="stepThreeLabel">IMPROVE</span></b><h3 data-t="stepThreeTitle">Optimize</h3><p data-t="stepThreeDesc">Focus on reliability, usability and long-term value.</p></div>
+        <div class="step reveal"><b>01 / <span data-t="stepOneLabel">DISCOVER</span></b><h3 data-t="stepOneTitle">Understand</h3><p data-t="stepOneDesc">Identify business goals and technical priorities.</p></div>
+        <div class="step reveal"><b>02 / <span data-t="stepTwoLabel">CONNECT</span></b><h3 data-t="stepTwoTitle">Integrate</h3><p data-t="stepTwoDesc">Bring together appropriate tools and technologies.</p></div>
+        <div class="step reveal"><b>03 / <span data-t="stepThreeLabel">IMPROVE</span></b><h3 data-t="stepThreeTitle">Optimize</h3><p data-t="stepThreeDesc">Focus on reliability, usability and long-term value.</p></div>
       </div>
     </div>
   </section>
@@ -353,6 +372,21 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
   let language="en";
   try{if(localStorage.getItem("exalink-language")==="fr")language="fr"}catch(e){}
   setLanguage(language);
+})();
+</script>
+<script src="motion.js" defer></script>
+<script>
+(function(){
+const values={
+en:{eyebrow:"YOUR CONNECTED FOUNDATION",heading:"Three specialties. One connected vision.",explore:"Explore our solutions ↘",title1:"IT & Networking",title2:"Telecommunications",title3:"Smart Systems & Integration",body1:"Reliable infrastructure and connected business networks.",body2:"Professional communications that keep teams connected.",body3:"Integrated technology adapted to the way you operate.",link:"View service",aria1:"Explore IT and networking",aria2:"Explore telecommunications",aria3:"Explore smart systems and integration"},
+fr:{eyebrow:"AU CŒUR DE VOTRE CONNECTIVITÉ",heading:"Trois expertises. Une même vision connectée.",explore:"Découvrir nos solutions ↘",title1:"Informatique et réseaux",title2:"Télécommunications",title3:"Systèmes intelligents et intégration",body1:"Des infrastructures fiables et des réseaux adaptés à votre entreprise.",body2:"Des communications professionnelles qui relient vos équipes.",body3:"Des technologies intégrées selon vos besoins opérationnels.",link:"Voir ce service",aria1:"Explorer les services informatiques et réseaux",aria2:"Explorer les télécommunications",aria3:"Explorer les systèmes intelligents et l’intégration"}};
+function update(){
+const lang=document.documentElement.lang==="fr"?"fr":"en";
+document.querySelectorAll("[data-feature]").forEach(el=>{el.textContent=values[lang][el.dataset.feature]});
+document.querySelectorAll("[data-feature-aria]").forEach(el=>el.setAttribute("aria-label",values[lang][el.dataset.featureAria]));
+}
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",update));
+update();
 })();
 </script>
 </body>
