@@ -35,7 +35,7 @@ function render(lang){
   $("sector-title").textContent=d.sectorsTitle;$("sector-intro").textContent=d.sectorsIntro;
   $("sector-items").innerHTML=d.sectors.map(v=>'<div><span aria-hidden="true">✓</span>'+escape(v)+'</div>').join("");
   $("steps").innerHTML=c.steps.map((item,i)=>'<article class="step"><span class="num">0'+(i+1)+'</span><h3>'+escape(item[0])+'</h3><p>'+escape(item[1])+'</p></article>').join("");
-  $("other-services").innerHTML=Object.keys(info).map(k=>'<a '+(k===key?'aria-current="page" ':'')+'href="'+pageUrls[k]+">'+escape(info[k][lang].title)+'</a>').join("");
+  $("other-services").innerHTML=Object.keys(info).map(k=>'<a '+(k===key?'aria-current="page" ':'')+'href="'+pageUrls[k]+'">'+escape(info[k][lang].title)+'</a>').join("");
   $("lang-en").setAttribute("aria-pressed",String(lang==="en"));
   $("lang-fr").setAttribute("aria-pressed",String(lang==="fr"));
   try{localStorage.setItem("exalink-language",lang)}catch(e){}
