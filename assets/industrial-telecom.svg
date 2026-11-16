@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+<title id="title">Industrial and mining telecommunications</title><desc id="desc">Stylized industrial radio tower, wireless coverage and underground communication infrastructure</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071b30"/><stop offset=".52" stop-color="#103d56"/><stop offset="1" stop-color="#081d30"/></linearGradient>
+<linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#24485a"/><stop offset="1" stop-color="#0a1b2a"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#00cee5" stop-opacity=".27"/><stop offset="1" stop-color="#00cee5" stop-opacity="0"/></radialGradient>
+<pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#79cfe4" opacity=".18"/></pattern></defs>
+<rect width="1400" height="900" fill="url(#bg)"/><rect width="1400" height="900" fill="url(#dots)"/>
+<circle cx="790" cy="240" r="360" fill="url(#glow)"/>
+<path d="M0 585Q240 550 470 582T920 574T1400 589V900H0Z" fill="url(#ground)"/>
+<path d="M0 603Q240 567 470 602T920 593T1400 605" fill="none" stroke="#59a2b8" opacity=".6" stroke-width="4"/>
+<path d="M300 900V681q0-24 24-24h742q24 0 24 24v219" fill="none" stroke="#40768a" stroke-width="13" opacity=".55"/>
+<path d="M370 900V737h645v163" fill="none" stroke="#5b8492" stroke-width="4" stroke-dasharray="17 16" opacity=".45"/>
+<g stroke="#8fe7ee" fill="none" stroke-linecap="round" opacity=".64">
+<path d="M685 610V147M685 147l-86 463h172L685 147Z" stroke-width="8"/>
+<path d="M631 420h109M618 500h135M651 325h68M669 239h32" stroke-width="8"/>
+<path d="M628 420l110 80m-96-175l98 95m-69-181l48 86m-91 95l111-95" stroke-width="4" opacity=".65"/>
+<path d="M685 147v-33" stroke-width="8"/>
+</g>
+<g stroke="#6ee9f1" fill="none" stroke-linecap="round" opacity=".66"><path d="M612 94a103 103 0 0 1 146 0" stroke-width="7"/><path d="M578 60a150 150 0 0 1 214 0" stroke-width="5"/><path d="M545 27a197 197 0 0 1 280 0" stroke-width="4" opacity=".5"/></g>
+<circle cx="685" cy="133" r="14" fill="#46e4ee"/><circle cx="685" cy="133" r="27" stroke="#59dfea" stroke-width="2" fill="none" opacity=".4"/>
+<g stroke="#29bfd4" fill="none" opacity=".52" stroke-width="5">
+<path d="M686 613v80h-245v108h-89"/><path d="M686 693h287v96h102"/><path d="M686 695v144"/><path d="M441 756h-80"/><path d="M973 746h69"/>
+</g>
+<g fill="#2dbdd0" stroke="#9cecf3" stroke-width="3"><rect x="312" y="781" width="76" height="43" rx="6"/><rect x="1037" y="768" width="77" height="43" rx="6"/><rect x="649" y="825" width="74" height="48" rx="6"/></g>
+<g fill="#c4f7f8"><circle cx="350" cy="801" r="5"/><circle cx="1076" cy="788" r="5"/><circle cx="685" cy="849" r="5"/></g>
+<g stroke="#60e8ef" stroke-width="4" opacity=".34" fill="none"><path d="M503 339a255 255 0 0 1 366 0"/><path d="M446 285a339 339 0 0 1 481 0"/><path d="M401 239a412 412 0 0 1 569 0"/></g>
+<g fill="#a6ecf1" opacity=".55"><circle cx="443" cy="692" r="7"/><circle cx="972" cy="695" r="7"/><circle cx="685" cy="692" r="7"/></g>
+</svg>
