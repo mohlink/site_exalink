@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b2034">
+<meta name="description" content="EXALINK provides IT infrastructure, business networks, telecommunications and smart systems integration for organizations.">
+<title>EXALINK — Connected solutions for ambitious businesses</title>
+<link rel="preconnect" href="https://images.unsplash.com">
+<style>
+:root{--ink:#10273b;--navy:#0a2033;--navy2:#153c54;--aqua:#00bad3;--aqua-light:#d9f9fb;--paper:#f8fafb;--white:#fff;--mute:#5b6d7b;--line:#dce5ea;--shadow:0 20px 60px rgba(9,31,50,.08)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;color:var(--ink);background:#fff;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin-top:0}h1,h2,h3{line-height:1.16;letter-spacing:-.04em}
+a{text-decoration:none;color:inherit}button{font:inherit}a:focus-visible,button:focus-visible{outline:3px solid #00a5bf;outline-offset:4px}
+.wrap{width:min(1180px,calc(100% - 68px));margin-inline:auto}
+.header{height:80px;position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);border-bottom:1px solid #e3eaf0;backdrop-filter:blur(15px)}
+.header-inner{display:flex;align-items:center;gap:30px;height:100%}
+.brand{font-size:27px;line-height:1;font-weight:860;letter-spacing:.135em;color:var(--navy)}
+.brand span{color:var(--aqua)}
+.nav{display:flex;align-items:center;gap:29px;margin-left:auto}
+.nav a{font-size:13px;font-weight:650;color:#344a5e}
+.nav a:hover{color:#008fa8}
+.lang{display:flex;gap:3px;padding:3px;border:1px solid #cbd9df;border-radius:50px}
+.lang button{border:0;background:transparent;padding:6px 11px;border-radius:30px;color:#556b7e;cursor:pointer;font-size:12px;font-weight:850}
+.lang button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.header-cta{background:var(--navy);color:#fff;padding:11px 17px;border-radius:7px;font-size:13px;font-weight:700;white-space:nowrap}
+.header-cta:hover{background:#174461}
+.hero{background:#f3f7f9;position:relative;overflow:hidden}
+.hero-layout{min-height:630px;display:grid;grid-template-columns:52% 48%;align-items:stretch}
+.hero-copy{padding:85px 56px 75px max(34px,calc((100vw - 1180px)/2));display:flex;flex-direction:column;align-items:flex-start;justify-content:center;z-index:1}
+.kicker{display:flex;align-items:center;gap:10px;color:#008ba2;text-transform:uppercase;letter-spacing:.17em;font-size:11px;font-weight:850}
+.kicker:before{content:"";width:25px;height:2px;background:var(--aqua)}
+.hero h1{max-width:700px;margin:26px 0;font-size:clamp(43px,5vw,74px);font-weight:800;line-height:1.055}
+.hero h1 em{font-style:normal;color:#009db5}
+.hero-copy .intro{font-size:17px;color:#465e6d;max-width:570px;line-height:1.8}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:12px;padding:14px 22px;min-height:51px;border-radius:6px;font-weight:770;font-size:13px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px #152a3d21}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-border{border:1px solid #9ab3bf;color:#143047}
+.arrow{font-size:18px;line-height:1}
+.hero-media{position:relative;min-height:490px;overflow:hidden;background:#153e57}
+.hero-media::before{position:absolute;inset:0;content:"";background:linear-gradient(110deg,rgba(7,24,41,.40),rgba(7,24,41,.17)),url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85") center center/cover no-repeat}
+.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#061b30c9,transparent 50%)}
+.hero-badge{position:absolute;z-index:2;top:34px;left:34px;display:flex;align-items:center;gap:12px;padding:12px 16px;background:#ffffffeb;border:1px solid #ffffff90;border-radius:9px;box-shadow:var(--shadow)}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--aqua);box-shadow:0 0 0 5px #00bad31c}
+.hero-badge span{font-size:12px;color:var(--navy);font-weight:800;letter-spacing:.03em}
+.media-caption{position:absolute;bottom:35px;left:35px;right:28px;z-index:2;color:#fff;display:flex;align-items:end;justify-content:space-between;gap:20px}
+.media-caption strong{display:block;font-size:21px;line-height:1.23;letter-spacing:-.025em}
+.media-caption small{display:block;color:#d0e5ed;font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:9px}
+.media-symbol{display:grid;place-items:center;width:59px;height:59px;border:1px solid #a3dbe7a3;border-radius:50%;font-size:29px;flex:none}
+.value-strip{background:#0a2033;color:#fff}
+.value-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.value{display:flex;align-items:center;gap:17px;padding:30px 30px 30px 0}
+.value+.value{border-left:1px solid #254156;padding-left:36px}
+.value-num{font-size:27px;color:var(--aqua);line-height:1;font-weight:830;letter-spacing:-.04em}
+.value-text{font-size:13px;color:#e3eef4;line-height:1.5;font-weight:600}
+.section{padding:100px 0}
+.section-top{max-width:770px;margin-bottom:40px}
+.overline{color:#008fa6;font-size:11px;font-weight:900;letter-spacing:.17em;text-transform:uppercase}
+h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
+.section-lead{max-width:690px;color:var(--mute);font-size:17px;line-height:1.8}
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.service-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 15px 34px rgba(13,40,62,.055);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.service-art{height:186px;background-size:cover;background-position:center;position:relative;overflow:hidden}
+.service-art:after{content:"";inset:0;position:absolute;background:linear-gradient(to bottom,transparent 40%,#081c3152)}
+.service-card:nth-child(1) .service-art{background-image:linear-gradient(110deg,#0a35534d,#00647a20),url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80")}
+.service-card:nth-child(2) .service-art{background-image:linear-gradient(110deg,#0a35534d,#00647a20),url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80")}
+.service-card:nth-child(3) .service-art{background-image:linear-gradient(110deg,#0a35534d,#00647a20),url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80")}
+.service-no{position:absolute;z-index:2;top:18px;left:19px;display:grid;place-items:center;width:39px;height:39px;border-radius:7px;background:#fff;color:#007c94;font-size:12px;font-weight:900;letter-spacing:.04em}
+.service-content{padding:28px 28px 30px;display:flex;flex-direction:column;flex:1}
+.service-content h3{font-size:24px;margin:0 0 13px;font-weight:790}
+.service-content p{color:var(--mute);font-size:14px;margin-bottom:19px;line-height:1.75}
+.service-content ul{margin:auto 0 0;padding:16px 0 0;border-top:1px solid var(--line);list-style:none}
+.service-content li{display:flex;gap:10px;color:#32495a;font-size:13px;padding:4px 0}
+.service-content li:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--aqua);flex:none;margin-top:8px}
+.solutions{background:#eff5f7}
+.solutions-layout{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:85px}
+.solutions-image{position:relative;min-height:510px;border-radius:12px;background:#1a5062 url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=950&q=82") center/cover no-repeat}
+.solutions-image:after{content:"";position:absolute;inset:0;border-radius:12px;background:linear-gradient(0deg,#0b293baa,transparent 55%)}
+.solutions-overlap{position:absolute;z-index:2;bottom:-25px;right:-24px;padding:22px 26px;background:#fff;box-shadow:var(--shadow);border-left:4px solid var(--aqua);max-width:245px}
+.solutions-overlap strong{display:block;font-size:17px;line-height:1.3}
+.solutions-overlap span{font-size:12px;color:var(--mute)}
+.point-list{padding:0;margin:29px 0 0;list-style:none}
+.point-list li{display:flex;gap:14px;padding:17px 0;border-bottom:1px solid #d6e1e6}
+.point-list li b{font-size:14px}
+.point-list li span{display:block;font-size:13px;color:var(--mute);line-height:1.6}
+.point-check{width:28px;height:28px;display:grid;place-items:center;border-radius:50%;color:#007f97;background:#cff4f8;font-size:15px;font-weight:800;flex:none}
+.innovation{background:var(--navy);color:#fff;padding:85px 0}
+.innovation-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:65px;align-items:center}
+.innovation .overline{color:#55d8e8}
+.innovation p{color:#cfdfeb;max-width:640px;font-size:16px;line-height:1.85}
+.innovation-panel{border:1px solid #45677b;padding:31px;border-radius:15px;background:radial-gradient(circle at top right,#14516a,#0f2b42 70%)}
+.capability{display:flex;gap:15px;align-items:center;padding:14px 0}
+.capability+.capability{border-top:1px solid #426075}
+.capability-icon{width:41px;height:41px;border:1px solid #56b5c9;border-radius:9px;display:grid;place-items:center;font-size:18px;color:#73e5ec}
+.capability strong{font-size:14px;line-height:1.3}
+.capability span{display:block;font-size:12px;color:#b9cfdf}
+.process .section-top{text-align:center;margin-inline:auto}
+.process .section-lead{margin-inline:auto}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:43px}
+.step{padding:20px 27px;border-left:2px solid #bcd7e2}
+.step b{color:#008fa7;font-size:13px;letter-spacing:.11em}
+.step h3{margin:13px 0 11px;font-size:20px}
+.step p{color:var(--mute);font-size:14px;margin:0}
+.contact{padding:80px 0;background:linear-gradient(115deg,#0b2033,#164a61);color:#fff}
+.contact-content{display:flex;align-items:center;justify-content:space-between;gap:45px}
+.contact h2{font-size:clamp(30px,4vw,50px);max-width:720px}
+.contact p{max-width:640px;color:#d4e5ed;margin-bottom:0}
+.contact .btn{background:var(--aqua);color:#092237;flex:none}
+.contact-note{color:#accbd7!important;font-size:12px;margin-top:18px}
+.footer{background:#081828;color:#b6cbd6}
+.footer-content{padding:33px 0;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.footer .brand{color:#fff;font-size:21px}
+.footer small{font-size:12px}
+@media(max-width:1080px){.nav{gap:16px}.hero-layout{grid-template-columns:53% 47%}.hero-copy{padding-right:32px}.hero h1{font-size:53px}.solutions-layout{gap:42px}}
+@media(max-width:780px){.wrap{width:min(100% - 36px,1180px)}.header{height:auto;min-height:74px}.header-inner{flex-wrap:wrap;gap:12px;padding:14px 0}.nav{order:3;overflow-x:auto;width:100%;gap:23px;margin:0;padding:4px 0;white-space:nowrap}.header-cta{margin-left:auto}.hero-layout{grid-template-columns:1fr}.hero-copy{padding:65px 24px}.hero-media{min-height:390px}.value-grid{grid-template-columns:1fr}.value{padding:19px 0}.value+.value{border-left:none;border-top:1px solid #254156;padding:19px 0}.card-grid{grid-template-columns:1fr}.service-art{height:230px}.solutions-layout,.innovation-grid{grid-template-columns:1fr;gap:40px}.solutions-image{min-height:350px}.solutions-overlap{bottom:-14px;right:16px}.steps{grid-template-columns:1fr;gap:12px}.contact-content{flex-direction:column;align-items:start}}
+@media(max-width:480px){.brand{font-size:22px}.header-cta{display:none}.hero h1{font-size:43px}.hero-copy{padding:55px 19px}.hero-media{min-height:305px}.hero-badge{top:18px;left:17px}.media-caption{bottom:20px;left:18px}.media-caption strong{font-size:17px}.media-symbol{width:45px;height:45px}.section{padding:69px 0}.solutions-image{min-height:290px}.innovation{padding:67px 0}.footer-content{align-items:start;flex-direction:column;gap:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Clear industrial telecommunications specialization — v6 */
+#service-telecom{border-color:#40bcd0;box-shadow:0 16px 42px #0e829a20}
+#service-telecom .service-content h3{margin-bottom:9px}
+.industry-highlight{width:fit-content;max-width:100%;padding:7px 10px;border-radius:6px;background:#dff7fa;color:#006d83;font-size:10px;font-weight:850;letter-spacing:.095em;line-height:1.6;margin-bottom:13px}
+</style>
+<link rel="stylesheet" href="enhancements.css?v=6">
+<link rel="stylesheet" href="slider.css?v=6">
+</head>
+<body>
+<header class="header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" aria-label="EXALINK home">EXALINK<span>.</span></a>
+    <nav class="nav" id="navigation" aria-label="Primary navigation">
+      <a href="#services" data-t="navServices">Services</a>
+      <a href="#approach" data-t="navApproach">Our approach</a>
+      <a href="#expertise" data-t="navExpertise">Innovation</a>
+      <a href="#contact" data-t="navContact">Contact</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Langue">
+      <button id="en" type="button" lang="en" aria-pressed="true">EN</button><button id="fr" type="button" lang="fr" aria-pressed="false">FR</button>
+    </div>
+    <a href="#contact" class="header-cta" data-t="headerCta">Start a conversation ↗</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <div class="kicker" data-t="heroKicker">IT · TELECOM · SYSTEMS INTEGRATION</div>
+        <h1><span data-t="heroLine1">Smarter connections.</span> <em data-t="heroLine2">Stronger business.</em></h1>
+        <p class="intro" data-t="heroText">Technology should move your business forward. We bring together IT infrastructure, networking, communications and intelligent systems into solutions tailored to your operations.</p>
+        <div class="actions">
+          <a class="btn btn-dark" href="#services"><span data-t="heroBtn1">Explore our solutions</span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="btn btn-border" href="#contact" data-t="heroBtn2">Let's talk</a>
+        </div>
+      </div>
+      <div class="hero-media slider" role="region" aria-roledescription="carousel" aria-label="Featured images of EXALINK activities">
+        <div class="slider-track">
+          <div class="hero-slide is-active" aria-hidden="false"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" alt="Professional server racks with connected network equipment" fetchpriority="high" decoding="async"></div>
+          <div class="hero-slide" aria-hidden="true"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" alt="Professional business communications" loading="lazy" decoding="async"></div>
+          <div class="hero-slide" aria-hidden="true"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" alt="Electronics for smart systems integration" loading="lazy" decoding="async"></div>
+          <div class="hero-slide" aria-hidden="true"><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" alt="Mobile robotics and technology innovation" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="hero-badge"><i class="dot" aria-hidden="true"></i><span data-t="heroBadge">BUSINESS TECHNOLOGY</span></div>
+        <div class="media-caption"><div><small data-slider-eyebrow>IT &amp; NETWORKING</small><strong data-slider-title>Infrastructure that keeps you connected.</strong></div><div class="media-symbol" aria-hidden="true">⌁</div></div>
+        <div class="slider-controls" role="group" aria-label="Slideshow controls">
+          <button type="button" class="slider-arrow slider-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button>
+          <button type="button" class="slider-arrow slider-next" aria-label="Next image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg></button>
+          <div class="slider-dots" aria-label="Choose image">
+            <button type="button" class="slider-dot" aria-label="View image 1 of 4" aria-current="true"></button>
+            <button type="button" class="slider-dot" aria-label="View image 2 of 4" aria-current="false"></button>
+            <button type="button" class="slider-dot" aria-label="View image 3 of 4" aria-current="false"></button>
+            <button type="button" class="slider-dot" aria-label="View image 4 of 4" aria-current="false"></button>
+          </div>
+          <span class="slider-count" aria-hidden="true">01 / 04</span>
+          <button type="button" class="slider-pause" aria-pressed="false" aria-label="Pause automatic slideshow" title="Pause automatic slideshow">
+            <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>
+            <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="m8 5 11 7-11 7z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="feature-band" aria-labelledby="features-heading">
+    <div class="wrap">
+      <div class="feature-heading reveal">
+        <div><small data-feature="eyebrow">YOUR CONNECTED FOUNDATION</small><h2 id="features-heading" data-feature="heading">Three specialties. One connected vision.</h2></div>
+        <a href="#services" data-feature="explore">Explore our solutions ↘</a>
+      </div>
+      <div class="feature-cards">
+        <a href="#service-it" class="feature-card reveal" data-feature-aria="aria1">
+          <div class="feature-card-top"><span class="feature-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="36" height="13" rx="3"/><rect x="6" y="29" width="36" height="13" rx="3"/><path d="M13 12h.01M13 35h.01M20 12h14M20 35h14M24 19v10"/></svg></span><span class="feature-index">01</span></div>
+          <h3 data-feature="title1">IT & Networking</h3><p data-feature="body1">Reliable infrastructure and connected business networks.</p>
+          <span class="feature-link"><span data-feature="link">View service</span><b aria-hidden="true">↗</b></span>
+        </a>
+        <a href="#service-telecom" class="feature-card reveal" data-feature-aria="aria2">
+          <div class="feature-card-top"><span class="feature-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h-5a4 4 0 0 0-4 4c0 16.5 13.5 30 30 30a4 4 0 0 0 4-4v-5l-11-4-5 6c-5-2.5-8.5-6-11-11l6-5z"/><path d="M29 9c5.5 0 10 4.5 10 10M29 15c2.2 0 4 1.8 4 4"/></svg></span><span class="feature-index">02</span></div>
+          <h3 data-feature="title2">Telecommunications</h3><p data-feature="body2">VoIP, wired and wireless connectivity, LTE/5G and Wi-Fi for industry and mining.</p>
+          <span class="feature-link"><span data-feature="link">View service</span><b aria-hidden="true">↗</b></span>
+        </a>
+        <a href="#service-integration" class="feature-card reveal" data-feature-aria="aria3">
+          <div class="feature-card-top"><span class="feature-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="17" width="14" height="14" rx="3"/><path d="M24 6v11M24 31v11M6 24h11M31 24h11M10 10l7 7M31 31l7 7M38 10l-7 7M17 31l-7 7"/><circle cx="24" cy="24" r="3"/></svg></span><span class="feature-index">03</span></div>
+          <h3 data-feature="title3">Smart Systems & Integration</h3><p data-feature="body3">Integrated technology adapted to the way you operate.</p>
+          <span class="feature-link"><span data-feature="link">View service</span><b aria-hidden="true">↗</b></span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-top reveal">
+        <div class="overline" data-t="servicesEyebrow">OUR CORE SERVICES</div>
+        <h2 data-t="servicesTitle">One technology partner. Connected solutions.</h2>
+        <p class="section-lead" data-t="servicesLead">We support businesses and organizations with practical technology services, from day-to-day IT to connected systems and integrated communications.</p>
+      </div>
+      <div class="card-grid">
+        <article class="service-card reveal" id="service-it">
+          <div class="service-art" role="img" aria-label="Illustrative photograph of network infrastructure"><span class="service-no">01</span></div>
+          <div class="service-content">
+            <h3 data-t="itTitle">IT & Networking</h3>
+            <p data-t="itText">Dependable infrastructure, well-designed networks and technical support to keep your team connected.</p>
+            <ul><li data-t="it1">Wired networks and business Wi-Fi</li><li data-t="it2">Hardware and infrastructure support</li><li data-t="it3">Configuration, maintenance and troubleshooting</li></ul>
+          </div>
+        </article>
+        <article class="service-card reveal" id="service-telecom">
+          <div class="service-art" role="img" aria-label="Illustrative photograph of professional communication technology"><span class="service-no">02</span></div>
+          <div class="service-content">
+            <h3 data-t="teleTitle">Telecommunications</h3>
+            <div class="industry-highlight" data-t="teleHighlight">LTE / 5G / INDUSTRIAL WI-FI / MINING</div>
+            <p data-t="teleText">Business communications and wired or wireless networks, including LTE, 5G and Wi-Fi solutions for industrial and mining environments.</p>
+            <ul><li data-t="tele1">VoIP and business telephony</li><li data-t="tele2">Wired and wireless networks for industry and mines</li><li data-t="tele3">LTE/5G and industrial Wi-Fi connectivity</li><li data-t="tele4">Network integration and communications infrastructure</li></ul>
+          </div>
+        </article>
+        <article class="service-card reveal" id="service-integration">
+          <div class="service-art" role="img" aria-label="Illustrative photograph of electronic systems"><span class="service-no">03</span></div>
+          <div class="service-content">
+            <h3 data-t="autoTitle">Smart Systems & Integration</h3>
+            <p data-t="autoText">Thoughtful integration of connected technologies to simplify and support business processes.</p>
+            <ul><li data-t="auto1">Connected devices and IoT</li><li data-t="auto2">Automation and monitoring concepts</li><li data-t="auto3">Custom systems integration</li></ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="section solutions" id="approach">
+    <div class="wrap solutions-layout">
+      <div class="solutions-image reveal" role="img" aria-label="Illustrative photograph of a modern business environment">
+        <div class="solutions-overlap"><strong data-t="overlapTitle">Practical by design.</strong><span data-t="overlapCaption">Technology with a clear purpose.</span></div>
+      </div>
+      <div>
+        <div class="overline" data-t="approachEyebrow">OUR APPROACH</div>
+        <h2 data-t="approachTitle">Your operations first. Technology second.</h2>
+        <p class="section-lead" data-t="approachLead">The right solution starts with understanding your environment, your constraints and what success means for your business.</p>
+        <ul class="point-list">
+          <li><div class="point-check" aria-hidden="true">✓</div><div><b data-t="approach1title">Understand the need</b><span data-t="approach1text">We begin with your goals, existing systems and practical constraints.</span></div></li>
+          <li><div class="point-check" aria-hidden="true">✓</div><div><b data-t="approach2title">Connect the right technologies</b><span data-t="approach2text">We focus on compatible and well-integrated solutions.</span></div></li>
+          <li><div class="point-check" aria-hidden="true">✓</div><div><b data-t="approach3title">Keep it clear and useful</b><span data-t="approach3text">Straightforward technical decisions with long-term value in mind.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="innovation" id="expertise">
+    <div class="wrap innovation-grid">
+      <div>
+        <div class="overline" data-t="innovationEyebrow">ENGINEERING & INNOVATION</div>
+        <h2 data-t="innovationTitle">Curiosity beyond the everyday.</h2>
+        <p data-t="innovationText">Alongside our business technology services, our technical interests include advanced connected systems, mobile robotics, autonomous navigation and environmental mapping. These areas reflect our engineering-minded approach to exploration and innovation.</p>
+      </div>
+      <div class="innovation-panel reveal">
+        <div class="capability"><div class="capability-icon" aria-hidden="true">◇</div><div><strong data-t="cap1">Mobile robotics</strong><span data-t="cap1sub">Systems and mobility</span></div></div>
+        <div class="capability"><div class="capability-icon" aria-hidden="true">↗</div><div><strong data-t="cap2">Autonomous navigation</strong><span data-t="cap2sub">Intelligent movement and control</span></div></div>
+        <div class="capability"><div class="capability-icon" aria-hidden="true">▧</div><div><strong data-t="cap3">Mapping & exploration</strong><span data-t="cap3sub">Understanding complex environments</span></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section process">
+    <div class="wrap">
+      <div class="section-top reveal">
+        <div class="overline" data-t="processEyebrow">HOW WE THINK</div>
+        <h2 data-t="processTitle">Technology choices should be simple to understand.</h2>
+        <p class="section-lead" data-t="processLead">We believe in a straightforward approach that brings the right systems together without unnecessary complexity.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><b>01 / <span data-t="stepOneLabel">DISCOVER</span></b><h3 data-t="stepOneTitle">Understand</h3><p data-t="stepOneDesc">Identify business goals and technical priorities.</p></div>
+        <div class="step reveal"><b>02 / <span data-t="stepTwoLabel">CONNECT</span></b><h3 data-t="stepTwoTitle">Integrate</h3><p data-t="stepTwoDesc">Bring together appropriate tools and technologies.</p></div>
+        <div class="step reveal"><b>03 / <span data-t="stepThreeLabel">IMPROVE</span></b><h3 data-t="stepThreeTitle">Optimize</h3><p data-t="stepThreeDesc">Focus on reliability, usability and long-term value.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="wrap contact-content">
+      <div>
+        <div class="overline" data-t="contactEyebrow">LET'S WORK TOGETHER</div>
+        <h2 data-t="contactTitle">A project in mind? Let's connect the pieces.</h2>
+        <p data-t="contactText">Tell us about your IT, communications or systems integration needs. We'll explore the next steps together.</p>
+        <p class="contact-note" data-t="contactNote">Website preview — verified contact details will be added before launch.</p>
+      </div>
+      <a href="#top" class="btn" data-t="backToTop">Back to top ↑</a>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="wrap footer-content"><a href="#top" class="brand">EXALINK<span>.</span></a><small data-t="footer">© 2026 EXALINK · Preview website · Business technology solutions</small></div></footer>
+<script>
+(function(){
+  "use strict";
+  const texts={
+    en:{
+      title:"EXALINK — Connected solutions for ambitious businesses",
+      description:"EXALINK provides IT infrastructure, business networks, telecommunications and smart systems integration for organizations.",
+      navServices:"Services",navApproach:"Our approach",navExpertise:"Innovation",navContact:"Contact",headerCta:"Start a conversation ↗",
+      heroKicker:"IT · TELECOM · SYSTEMS INTEGRATION",heroLine1:"Smarter connections.",heroLine2:"Stronger business.",
+      heroText:"Technology should move your business forward. We bring together IT infrastructure, networking, communications and intelligent systems into solutions tailored to your operations.",
+      heroBtn1:"Explore our solutions",heroBtn2:"Let's talk",heroBadge:"BUSINESS TECHNOLOGY",
+      heroPhotoEyebrow:"CONNECTED INFRASTRUCTURE",heroPhotoTitle:"Built to connect. Designed to perform.",
+      value1:"Reliable infrastructure & network solutions",value2:"Connected communications for professionals",value3:"Integrated technology adapted to your needs",
+      servicesEyebrow:"OUR CORE SERVICES",servicesTitle:"One technology partner. Connected solutions.",
+      servicesLead:"We support businesses and organizations with practical technology services, from day-to-day IT to connected systems and integrated communications.",
+      itTitle:"IT & Networking",itText:"Dependable infrastructure, well-designed networks and technical support to keep your team connected.",
+      it1:"Wired networks and business Wi-Fi",it2:"Hardware and infrastructure support",it3:"Configuration, maintenance and troubleshooting",
+      teleTitle:"Telecommunications",teleText:"Business communications and wired or wireless networks, including LTE, 5G and Wi-Fi solutions for industrial and mining environments.",teleHighlight:"LTE / 5G / INDUSTRIAL WI-FI / MINING",
+      tele1:"VoIP and business telephony",tele2:"Wired and wireless networks for industry and mines",tele3:"LTE/5G and industrial Wi-Fi connectivity",tele4:"Network integration and communications infrastructure",
+      autoTitle:"Smart Systems & Integration",autoText:"Thoughtful integration of connected technologies to simplify and support business processes.",
+      auto1:"Connected devices and IoT",auto2:"Automation and monitoring concepts",auto3:"Custom systems integration",
+      overlapTitle:"Practical by design.",overlapCaption:"Technology with a clear purpose.",
+      approachEyebrow:"OUR APPROACH",approachTitle:"Your operations first. Technology second.",
+      approachLead:"The right solution starts with understanding your environment, your constraints and what success means for your business.",
+      approach1title:"Understand the need",approach1text:"We begin with your goals, existing systems and practical constraints.",
+      approach2title:"Connect the right technologies",approach2text:"We focus on compatible and well-integrated solutions.",
+      approach3title:"Keep it clear and useful",approach3text:"Straightforward technical decisions with long-term value in mind.",
+      innovationEyebrow:"ENGINEERING & INNOVATION",innovationTitle:"Curiosity beyond the everyday.",
+      innovationText:"Alongside our business technology services, our technical interests include advanced connected systems, mobile robotics, autonomous navigation and environmental mapping. These areas reflect our engineering-minded approach to exploration and innovation.",
+      cap1:"Mobile robotics",cap1sub:"Systems and mobility",cap2:"Autonomous navigation",cap2sub:"Intelligent movement and control",cap3:"Mapping & exploration",cap3sub:"Understanding complex environments",
+      processEyebrow:"HOW WE THINK",processTitle:"Technology choices should be simple to understand.",
+      processLead:"We believe in a straightforward approach that brings the right systems together without unnecessary complexity.",
+      stepOneLabel:"DISCOVER",stepOneTitle:"Understand",stepOneDesc:"Identify business goals and technical priorities.",
+      stepTwoLabel:"CONNECT",stepTwoTitle:"Integrate",stepTwoDesc:"Bring together appropriate tools and technologies.",
+      stepThreeLabel:"IMPROVE",stepThreeTitle:"Optimize",stepThreeDesc:"Focus on reliability, usability and long-term value.",
+      contactEyebrow:"LET'S WORK TOGETHER",contactTitle:"A project in mind? Let's connect the pieces.",
+      contactText:"Tell us about your IT, communications or systems integration needs. We'll explore the next steps together.",
+      contactNote:"Website preview — verified contact details will be added before launch.",
+      backToTop:"Back to top ↑",footer:"© 2026 EXALINK · Preview website · Business technology solutions"
+    },
+    fr:{
+      title:"EXALINK — Des solutions connectées pour les entreprises",
+      description:"EXALINK accompagne les entreprises en informatique, réseaux, télécommunications et intégration de systèmes intelligents.",
+      navServices:"Services",navApproach:"Notre approche",navExpertise:"Innovation",navContact:"Contact",headerCta:"Parlons de votre projet ↗",
+      heroKicker:"INFORMATIQUE · TÉLÉCOM · INTÉGRATION",heroLine1:"Mieux connectés.",heroLine2:"Plus performants.",
+      heroText:"La technologie doit faire avancer votre entreprise. Nous réunissons infrastructures TI, réseaux, communications et systèmes intelligents dans des solutions adaptées à vos opérations.",
+      heroBtn1:"Découvrir nos solutions",heroBtn2:"Nous joindre",heroBadge:"TECHNOLOGIES POUR ENTREPRISES",
+      heroPhotoEyebrow:"INFRASTRUCTURES CONNECTÉES",heroPhotoTitle:"Connecter. Intégrer. Optimiser.",
+      value1:"Infrastructures et réseaux fiables",value2:"Communications connectées pour les professionnels",value3:"Intégration adaptée à vos besoins",
+      servicesEyebrow:"NOS PRINCIPAUX SERVICES",servicesTitle:"Un partenaire technologique. Des solutions connectées.",
+      servicesLead:"Nous accompagnons les entreprises et les organisations dans leurs besoins informatiques, leurs communications professionnelles et l'intégration de systèmes connectés.",
+      itTitle:"Informatique et réseaux",itText:"Des infrastructures fiables, des réseaux bien conçus et un soutien technique pour vos activités.",
+      it1:"Réseaux filaires et Wi-Fi d'entreprise",it2:"Soutien matériel et infrastructure TI",it3:"Configuration, maintenance et dépannage",
+      teleTitle:"Télécommunications",teleText:"Des communications professionnelles et des réseaux filaires ou sans fil, notamment LTE, 5G et Wi-Fi, adaptés aux environnements industriels et miniers.",teleHighlight:"LTE / 5G / WI-FI INDUSTRIEL / MINES",
+      tele1:"Téléphonie IP et VoIP d'entreprise",tele2:"Réseaux filaires et sans fil pour l'industrie et les mines",tele3:"Connectivité LTE/5G et Wi-Fi industriel",tele4:"Intégration de réseaux et infrastructures de communication",
+      autoTitle:"Systèmes intelligents et intégration",autoText:"L'intégration de technologies connectées pour simplifier et soutenir vos processus d'affaires.",
+      auto1:"Objets connectés et IoT",auto2:"Concepts d'automatisation et de supervision",auto3:"Intégration de systèmes personnalisés",
+      overlapTitle:"Des solutions concrètes.",overlapCaption:"La technologie au service de vos objectifs.",
+      approachEyebrow:"NOTRE APPROCHE",approachTitle:"Vos opérations d'abord. La technologie ensuite.",
+      approachLead:"La bonne solution commence par la compréhension de votre environnement, de vos contraintes et de vos objectifs.",
+      approach1title:"Comprendre le besoin",approach1text:"Nous partons de vos objectifs, de l'existant et des contraintes concrètes.",
+      approach2title:"Connecter les bonnes technologies",approach2text:"Nous misons sur des solutions compatibles et bien intégrées.",
+      approach3title:"Garder les choses simples et utiles",approach3text:"Des choix techniques clairs et une valeur durable.",
+      innovationEyebrow:"INGÉNIERIE ET INNOVATION",innovationTitle:"La curiosité au-delà du quotidien.",
+      innovationText:"En parallèle de nos services technologiques, nos champs d'intérêt techniques incluent les systèmes connectés avancés, la robotique mobile, la navigation autonome et la cartographie d'environnements. Ils nourrissent notre approche d'ingénierie et d'innovation.",
+      cap1:"Robotique mobile",cap1sub:"Systèmes et mobilité",cap2:"Navigation autonome",cap2sub:"Déplacement et commande intelligents",cap3:"Cartographie et exploration",cap3sub:"Compréhension d'environnements complexes",
+      processEyebrow:"NOTRE PHILOSOPHIE",processTitle:"Les choix technologiques doivent rester simples à comprendre.",
+      processLead:"Nous privilégions une démarche claire pour relier les bons systèmes sans complexité inutile.",
+      stepOneLabel:"DÉCOUVRIR",stepOneTitle:"Comprendre",stepOneDesc:"Identifier les objectifs et les priorités techniques.",
+      stepTwoLabel:"CONNECTER",stepTwoTitle:"Intégrer",stepTwoDesc:"Réunir des outils et technologies adaptés.",
+      stepThreeLabel:"AMÉLIORER",stepThreeTitle:"Optimiser",stepThreeDesc:"Privilégier la fiabilité, l'utilité et la durabilité.",
+      contactEyebrow:"TRAVAILLONS ENSEMBLE",contactTitle:"Un projet en tête ? Connectons les solutions.",
+      contactText:"Parlez-nous de vos besoins en informatique, communications ou intégration de systèmes. Nous pourrons explorer les prochaines étapes ensemble.",
+      contactNote:"Site de démonstration — les coordonnées vérifiées seront ajoutées avant la mise en ligne.",
+      backToTop:"Retour en haut ↑",footer:"© 2026 EXALINK · Site de démonstration · Solutions technologiques pour entreprises"
+    }
+  };
+  const btnEn=document.getElementById("en"),btnFr=document.getElementById("fr");
+  function setLanguage(choice){
+    const language=choice==="fr"?"fr":"en",t=texts[language];
+    document.documentElement.lang=language;
+    document.title=t.title;
+    document.querySelector('meta[name="description"]').setAttribute("content",t.description);
+    document.querySelectorAll("[data-t]").forEach(el=>{
+      const key=el.getAttribute("data-t");
+      if(Object.prototype.hasOwnProperty.call(t,key))el.textContent=t[key];
+    });
+    btnEn.setAttribute("aria-pressed",String(language==="en"));
+    btnFr.setAttribute("aria-pressed",String(language==="fr"));
+    document.querySelector("#navigation").setAttribute("aria-label",language==="fr"?"Navigation principale":"Primary navigation");
+    try{localStorage.setItem("exalink-language",language)}catch(e){}
+  }
+  btnEn.addEventListener("click",()=>setLanguage("en"));
+  btnFr.addEventListener("click",()=>setLanguage("fr"));
+  let language="en";
+  try{if(localStorage.getItem("exalink-language")==="fr")language="fr"}catch(e){}
+  setLanguage(language);
+})();
+</script>
+<script src="motion.js?v=6" defer></script>
+<script src="slider.js?v=6" defer></script>
+<script>
+(function(){
+const values={
+en:{eyebrow:"YOUR CONNECTED FOUNDATION",heading:"Three specialties. One connected vision.",explore:"Explore our solutions ↘",title1:"IT & Networking",title2:"Telecommunications",title3:"Smart Systems & Integration",body1:"Reliable infrastructure and connected business networks.",body2:"VoIP, wired and wireless connectivity, LTE/5G and Wi-Fi for industry and mining.",body3:"Integrated technology adapted to the way you operate.",link:"View service",aria1:"Explore IT and networking",aria2:"Explore telecommunications",aria3:"Explore smart systems and integration"},
+fr:{eyebrow:"AU CŒUR DE VOTRE CONNECTIVITÉ",heading:"Trois expertises. Une même vision connectée.",explore:"Découvrir nos solutions ↘",title1:"Informatique et réseaux",title2:"Télécommunications",title3:"Systèmes intelligents et intégration",body1:"Des infrastructures fiables et des réseaux adaptés à votre entreprise.",body2:"VoIP, réseaux filaires et sans fil, LTE/5G et Wi-Fi pour l’industrie et les mines.",body3:"Des technologies intégrées selon vos besoins opérationnels.",link:"Voir ce service",aria1:"Explorer les services informatiques et réseaux",aria2:"Explorer les télécommunications",aria3:"Explorer les systèmes intelligents et l’intégration"}};
+function update(){
+const lang=document.documentElement.lang==="fr"?"fr":"en";
+document.querySelectorAll("[data-feature]").forEach(el=>{el.textContent=values[lang][el.dataset.feature]});
+document.querySelectorAll("[data-feature-aria]").forEach(el=>el.setAttribute("aria-label",values[lang][el.dataset.featureAria]));
+}
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",update));
+update();
+})();
+</script>
+</body>
+</html>
