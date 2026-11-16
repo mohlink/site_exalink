@@ -14,6 +14,7 @@ const common={
 en:{home:"Home",services:"Services",approach:"Approach",contact:"Contact",start:"Discuss your project ↗",crumb:"Services",what:"WHAT WE CAN HELP WITH",where:"APPLICATIONS",method:"OUR APPROACH",methodTitle:"From the need to an integrated solution",methodDesc:"We favour a practical, collaborative process adapted to the context of each project.",steps:[["Understand","Review the environment and technical objectives."],["Design","Identify suitable technologies and integration options."],["Support","Assist with configuration, validation and practical improvements."]],contactEyebrow:"LET’S CONNECT",contactTitle:"Discuss your next technology project.",contactText:"Share your requirements and constraints so we can explore suitable options.",contactNotice:"Preview website — contact details will be confirmed before launch.",back:"Return to home",other:"EXPLORE OUR SERVICES",footer:"© 2026 EXALINK · Service presentation · Website preview"},
 fr:{home:"Accueil",services:"Services",approach:"Approche",contact:"Contact",start:"Parlons de votre projet ↗",crumb:"Services",what:"NOS SERVICES",where:"APPLICATIONS",method:"NOTRE APPROCHE",methodTitle:"Du besoin à la solution intégrée",methodDesc:"Nous favorisons une démarche pratique et collaborative, adaptée au contexte de chaque projet.",steps:[["Comprendre","Évaluer le contexte et les objectifs techniques."],["Concevoir","Déterminer les technologies et les intégrations appropriées."],["Accompagner","Aider à configurer, valider et améliorer les solutions."]],contactEyebrow:"PARLONS DE VOTRE PROJET",contactTitle:"Discutons de votre prochain projet technologique.",contactText:"Présentez vos besoins et contraintes pour explorer les solutions adaptées.",contactNotice:"Site de démonstration — les coordonnées seront confirmées avant la publication.",back:"Retour à l’accueil",other:"DÉCOUVREZ NOS SERVICES",footer:"© 2026 EXALINK · Présentation des services · Site de démonstration"}
 };
+const pageUrls={it:"it-networking.html",telecom:"telecommunications.html",integration:"smart-systems.html"};
 const key=document.body.dataset.service;
 if(!info[key])return;
 const $=id=>document.getElementById(id);
@@ -34,7 +35,7 @@ function render(lang){
   $("sector-title").textContent=d.sectorsTitle;$("sector-intro").textContent=d.sectorsIntro;
   $("sector-items").innerHTML=d.sectors.map(v=>'<div><span aria-hidden="true">✓</span>'+escape(v)+'</div>').join("");
   $("steps").innerHTML=c.steps.map((item,i)=>'<article class="step"><span class="num">0'+(i+1)+'</span><h3>'+escape(item[0])+'</h3><p>'+escape(item[1])+'</p></article>').join("");
-  $("other-services").innerHTML=Object.keys(info).map(k=>'<a '+(k===key?'aria-current="page" ':'')+'href="'+k+'.html">'+escape(info[k][lang].title)+'</a>').join("");
+  $("other-services").innerHTML=Object.keys(info).map(k=>'<a '+(k===key?'aria-current="page" ':'')+'href="'+pageUrls[k]+">'+escape(info[k][lang].title)+'</a>').join("");
   $("lang-en").setAttribute("aria-pressed",String(lang==="en"));
   $("lang-fr").setAttribute("aria-pressed",String(lang==="fr"));
   try{localStorage.setItem("exalink-language",lang)}catch(e){}
