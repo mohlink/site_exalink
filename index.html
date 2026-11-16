@@ -125,6 +125,11 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
 #service-telecom{border-color:#40bcd0;box-shadow:0 16px 42px #0e829a20}
 #service-telecom .service-content h3{margin-bottom:9px}
 .industry-highlight{width:fit-content;max-width:100%;padding:7px 10px;border-radius:6px;background:#dff7fa;color:#006d83;font-size:10px;font-weight:850;letter-spacing:.095em;line-height:1.6;margin-bottom:13px}
+
+.service-learn-link{display:flex;align-items:center;justify-content:space-between;margin-top:17px;padding:13px 0 0;color:#007f98;border-top:1px solid #dce7eb;font-size:13px;font-weight:800;gap:14px}
+.service-learn-link:hover{color:#00586c}
+.service-learn-link span:last-child{font-size:20px;transition:transform .25s}
+.service-learn-link:hover span:last-child{transform:translate(4px,-3px)}
 </style>
 <link rel="stylesheet" href="enhancements.css?v=6">
 <link rel="stylesheet" href="slider.css?v=6">
@@ -191,17 +196,17 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
         <a href="#services" data-feature="explore">Explore our solutions ↘</a>
       </div>
       <div class="feature-cards">
-        <a href="#service-it" class="feature-card reveal" data-feature-aria="aria1">
+        <a href="services/it-networking.html" class="feature-card reveal" data-feature-aria="aria1">
           <div class="feature-card-top"><span class="feature-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="36" height="13" rx="3"/><rect x="6" y="29" width="36" height="13" rx="3"/><path d="M13 12h.01M13 35h.01M20 12h14M20 35h14M24 19v10"/></svg></span><span class="feature-index">01</span></div>
           <h3 data-feature="title1">IT & Networking</h3><p data-feature="body1">Reliable infrastructure and connected business networks.</p>
           <span class="feature-link"><span data-feature="link">View service</span><b aria-hidden="true">↗</b></span>
         </a>
-        <a href="#service-telecom" class="feature-card reveal" data-feature-aria="aria2">
+        <a href="services/telecommunications.html" class="feature-card reveal" data-feature-aria="aria2">
           <div class="feature-card-top"><span class="feature-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h-5a4 4 0 0 0-4 4c0 16.5 13.5 30 30 30a4 4 0 0 0 4-4v-5l-11-4-5 6c-5-2.5-8.5-6-11-11l6-5z"/><path d="M29 9c5.5 0 10 4.5 10 10M29 15c2.2 0 4 1.8 4 4"/></svg></span><span class="feature-index">02</span></div>
           <h3 data-feature="title2">Telecommunications</h3><p data-feature="body2">VoIP, wired and wireless connectivity, LTE/5G and Wi-Fi for industry and mining.</p>
           <span class="feature-link"><span data-feature="link">View service</span><b aria-hidden="true">↗</b></span>
         </a>
-        <a href="#service-integration" class="feature-card reveal" data-feature-aria="aria3">
+        <a href="services/smart-systems.html" class="feature-card reveal" data-feature-aria="aria3">
           <div class="feature-card-top"><span class="feature-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="17" width="14" height="14" rx="3"/><path d="M24 6v11M24 31v11M6 24h11M31 24h11M10 10l7 7M31 31l7 7M38 10l-7 7M17 31l-7 7"/><circle cx="24" cy="24" r="3"/></svg></span><span class="feature-index">03</span></div>
           <h3 data-feature="title3">Smart Systems & Integration</h3><p data-feature="body3">Integrated technology adapted to the way you operate.</p>
           <span class="feature-link"><span data-feature="link">View service</span><b aria-hidden="true">↗</b></span>
@@ -223,6 +228,7 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
             <h3 data-t="itTitle">IT & Networking</h3>
             <p data-t="itText">Dependable infrastructure, well-designed networks and technical support to keep your team connected.</p>
             <ul><li data-t="it1">Wired networks and business Wi-Fi</li><li data-t="it2">Hardware and infrastructure support</li><li data-t="it3">Configuration, maintenance and troubleshooting</li></ul>
+            <a class="service-learn-link" href="services/it-networking.html"><span data-t="learnMore">Explore this service</span><span aria-hidden="true">↗</span></a>
           </div>
         </article>
         <article class="service-card reveal" id="service-telecom">
@@ -232,6 +238,7 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
             <div class="industry-highlight" data-t="teleHighlight">LTE / 5G / INDUSTRIAL WI-FI / MINING</div>
             <p data-t="teleText">Business communications and wired or wireless networks, including LTE, 5G and Wi-Fi solutions for industrial and mining environments.</p>
             <ul><li data-t="tele1">VoIP and business telephony</li><li data-t="tele2">Wired and wireless networks for industry and mines</li><li data-t="tele3">LTE/5G and industrial Wi-Fi connectivity</li><li data-t="tele4">Network integration and communications infrastructure</li></ul>
+            <a class="service-learn-link" href="services/telecommunications.html"><span data-t="learnMore">Explore this service</span><span aria-hidden="true">↗</span></a>
           </div>
         </article>
         <article class="service-card reveal" id="service-integration">
@@ -240,6 +247,7 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
             <h3 data-t="autoTitle">Smart Systems & Integration</h3>
             <p data-t="autoText">Thoughtful integration of connected technologies to simplify and support business processes.</p>
             <ul><li data-t="auto1">Connected devices and IoT</li><li data-t="auto2">Automation and monitoring concepts</li><li data-t="auto3">Custom systems integration</li></ul>
+            <a class="service-learn-link" href="services/smart-systems.html"><span data-t="learnMore">Explore this service</span><span aria-hidden="true">↗</span></a>
           </div>
         </article>
       </div>
@@ -310,7 +318,7 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
     en:{
       title:"EXALINK — Connected solutions for ambitious businesses",
       description:"EXALINK provides IT infrastructure, business networks, telecommunications and smart systems integration for organizations.",
-      navServices:"Services",navApproach:"Our approach",navExpertise:"Innovation",navContact:"Contact",headerCta:"Start a conversation ↗",
+      navServices:"Services",navApproach:"Our approach",navExpertise:"Innovation",navContact:"Contact",learnMore:"Explore this service",headerCta:"Start a conversation ↗",
       heroKicker:"IT · TELECOM · SYSTEMS INTEGRATION",heroLine1:"Smarter connections.",heroLine2:"Stronger business.",
       heroText:"Technology should move your business forward. We bring together IT infrastructure, networking, communications and intelligent systems into solutions tailored to your operations.",
       heroBtn1:"Explore our solutions",heroBtn2:"Let's talk",heroBadge:"BUSINESS TECHNOLOGY",
@@ -346,7 +354,7 @@ h2{font-size:clamp(32px,3.7vw,48px);margin:12px 0 15px;font-weight:790}
     fr:{
       title:"EXALINK — Des solutions connectées pour les entreprises",
       description:"EXALINK accompagne les entreprises en informatique, réseaux, télécommunications et intégration de systèmes intelligents.",
-      navServices:"Services",navApproach:"Notre approche",navExpertise:"Innovation",navContact:"Contact",headerCta:"Parlons de votre projet ↗",
+      navServices:"Services",navApproach:"Notre approche",navExpertise:"Innovation",navContact:"Contact",learnMore:"Découvrir ce service",headerCta:"Parlons de votre projet ↗",
       heroKicker:"INFORMATIQUE · TÉLÉCOM · INTÉGRATION",heroLine1:"Mieux connectés.",heroLine2:"Plus performants.",
       heroText:"La technologie doit faire avancer votre entreprise. Nous réunissons infrastructures TI, réseaux, communications et systèmes intelligents dans des solutions adaptées à vos opérations.",
       heroBtn1:"Découvrir nos solutions",heroBtn2:"Nous joindre",heroBadge:"TECHNOLOGIES POUR ENTREPRISES",
