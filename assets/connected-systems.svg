@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+<title id="title">EXALINK connected systems and networking</title>
+<desc id="desc">Abstract enterprise network linking an industrial facility, network servers, mobile communication and intelligent systems</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071b2e"/><stop offset=".48" stop-color="#114158"/><stop offset="1" stop-color="#071b2e"/></linearGradient>
+<radialGradient id="gl"><stop stop-color="#00d2ea" stop-opacity=".18"/><stop offset="1" stop-color="#00d2ea" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" stroke="#6dcddd" stroke-opacity=".08" fill="none"/></pattern>
+</defs>
+<rect width="1400" height="900" fill="url(#bg)"/><rect width="1400" height="900" fill="url(#grid)"/><circle cx="700" cy="440" r="460" fill="url(#gl)"/>
+<g fill="none" stroke="#3d91a8" stroke-width="5" opacity=".66">
+<path d="M707 444 370 248M707 444 1064 242M707 444 1068 682M707 444 355 682"/>
+<path d="M370 248 355 682M1064 242 1068 682" stroke-width="2" stroke-dasharray="12 15"/>
+</g>
+<g fill="#0b3449" stroke="#6de2ee" stroke-width="5">
+<rect x="518" y="280" width="372" height="320" rx="33"/>
+<rect x="195" y="140" width="347" height="210" rx="20"/>
+<rect x="871" y="140" width="330" height="205" rx="20"/>
+<rect x="185" y="587" width="365" height="215" rx="20"/>
+<rect x="875" y="582" width="345" height="220" rx="20"/>
+</g>
+<g fill="none" stroke="#9dedf3" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+<rect x="586" y="355" width="236" height="48" rx="8"/><rect x="586" y="430" width="236" height="48" rx="8"/><rect x="586" y="505" width="236" height="48" rx="8"/>
+<path d="M625 380h52m-52 75h52m-52 75h52"/>
+<circle cx="786" cy="380" r="7" fill="#00d7e9"/><circle cx="786" cy="455" r="7" fill="#00d7e9"/><circle cx="786" cy="530" r="7" fill="#00d7e9"/>
+<path d="M261 301v-94h213v94m-139 0v-94"/><path d="M285 275h19m75 0h19m50 0h19"/>
+<path d="M982 286V222l53-47 54 47v64m-141 0h165m-104-66h53"/>
+<path d="M249 753V630h234v123m-183-76h134m-134 41h134"/>
+<path d="M971 716v-81h150v81m-130 0h110"/>
+</g>
+<g fill="none" stroke="#5ddce9" opacity=".74" stroke-width="5">
+<path d="M1001 162a70 70 0 0 1 102 0"/><path d="M982 138a99 99 0 0 1 140 0"/>
+<path d="M359 567a65 65 0 0 1 90 0"/><path d="M343 550a88 88 0 0 1 121 0"/>
+</g>
+<g fill="#4de0eb"><circle cx="707" cy="444" r="22"/><circle cx="370" cy="248" r="11"/><circle cx="1064" cy="242" r="11"/><circle cx="1068" cy="682" r="11"/><circle cx="355" cy="682" r="11"/></g>
+</svg>
