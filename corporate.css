@@ -69,3 +69,10 @@
 .draft-mailto{display:inline-flex;align-items:center;justify-content:center;border-radius:7px;padding:11px 17px;background:#0a3045;color:#fff;font-size:13px;font-weight:800}
 .draft-mailto:hover{background:#14536b}
 .draft-mailto[hidden]{display:none}
+
+/* Delivery confirmation is only used on configured Funio hosting. */
+.delivery-status{margin-top:17px;padding:14px 17px;border-radius:9px;font-size:14px;line-height:1.6;font-weight:650}
+.delivery-status[data-kind="success"]{background:#e7f7f1;color:#115d45;border:1px solid #9ed4bf}
+.delivery-status[data-kind="error"]{background:#fff1e9;color:#874021;border:1px solid #f0b9a0}
+.delivery-status[hidden]{display:none}
+.form-submit:disabled{opacity:.65;cursor:wait}
