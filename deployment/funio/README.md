@@ -44,3 +44,34 @@ https://mohlink.github.io/site_exalink/
 ## Final commercial validation
 
 Before launch, confirm official contact details, wording of all advertised activities, image rights, privacy text, mobile appearance, and SEO metadata.
+
+
+## Prepared frontend adapter (November 2026)
+
+The file `contact-delivery.js` is now included by `contact.html`, but **remains inactive** because the page contains:
+
+```html
+<body data-page="contact" data-contact-mode="draft">
+```
+
+In this mode, a visitor may prepare an email draft addressed to **info@exalink.ca**, but the website does not send an email.
+
+After the PHP backend is independently verified on an HTTPS Funio staging location, change **only the Funio staging copy** of the contact page to:
+
+```html
+<body data-page="contact" data-contact-mode="smtp">
+```
+
+**Do not change the GitHub Pages version to smtp mode.** The adapter checks for HTTPS and refuses to activate on `github.io`. On a configured Funio site, the browser obtains a same-origin CSRF token from `api/csrf.php` and submits to `api/contact.php`. It only displays a success confirmation if the server confirms `ok: true` and `message: sent`.
+
+Files required in the Funio web root: `contact.html`, `corporate.js`, `corporate.css`, `contact-delivery.js`, the other public site assets, and the two PHP files under `api/`. Do not deploy the `deployment/` folder as public content. SMTP credentials must be stored outside the web root.
+
+### Missing hosting information before live activation
+
+- Confirm the Funio hosting plan's PHP version and `mbstring` extension, SMTP server name, supported TLS port, and whether external SMTP connections are permitted.
+- Confirm which mailbox/account sends the message. A Microsoft 365 alias (`info@exalink.ca`) may receive messages without being able to authenticate by itself as an SMTP account.
+- Confirm the commercial recipient `info@exalink.ca` receives mail with the current Microsoft 365 routing, then again after the migration.
+- Confirm a privacy notice, anti-spam controls beyond a simple session rate limiter, and backend logging of failures without logging message bodies.
+- Test all submit, validation, replay and failover cases in staging. The PHP backend here is a **prototype**, not a certified production service.
+
+No changes to MX records, website DNS, WordPress, or Microsoft 365 are needed for this preparation.
