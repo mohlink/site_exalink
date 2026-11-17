@@ -62,3 +62,10 @@
 @media(max-width:880px){.corp-layout,.corp-intro-grid,.contact-grid-main{grid-template-columns:1fr}.corp-copy{padding:55px 25px}.corp-visual{min-height:280px}.corp-intro-grid,.contact-grid-main{gap:28px}.corp-tiles,.area-links{grid-template-columns:1fr}.corp-banner-grid{align-items:start;flex-direction:column}}
 @media(max-width:620px){.fields{grid-template-columns:1fr}.contact-form{padding:23px 20px}.contact-container{padding:60px 0}.corp-intro,.corp-areas{padding:63px 0}.corp-copy{padding:48px 18px}}
 @media(prefers-reduced-motion:reduce){.area-link{transition:none}}
+
+.contact-email-link{display:inline-block;margin-top:9px;font-size:17px;font-weight:850;color:#006e85;overflow-wrap:anywhere;text-decoration:underline;text-decoration-color:#64c9d5;text-underline-offset:4px}
+.contact-email-link:hover{color:#004c62}
+.draft-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:16px 0 10px}
+.draft-mailto{display:inline-flex;align-items:center;justify-content:center;border-radius:7px;padding:11px 17px;background:#0a3045;color:#fff;font-size:13px;font-weight:800}
+.draft-mailto:hover{background:#14536b}
+.draft-mailto[hidden]{display:none}
