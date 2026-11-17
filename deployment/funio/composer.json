@@ -1,0 +1,10 @@
+{
+  "name": "exalink/contact-form",
+  "description": "Private SMTP dependency for Exalink contact form",
+  "type": "project",
+  "require": {
+    "php": "^8.1",
+    "ext-mbstring": "*",
+    "phpmailer/phpmailer": "^6.9"
+  }
+}
