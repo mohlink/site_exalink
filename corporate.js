@@ -20,11 +20,11 @@ contactVisual:"A CONNECTED APPROACH",
 contactAsideKicker:"LET'S CONNECT",contactAsideTitle:"Start with your business needs",contactAsideBody:"A few details about your organization and project are enough to start a meaningful technical discussion.",
 contactPoint1:"Business & industrial projects",contactPoint1Text:"Solutions tailored to professional environments.",
 contactPoint2:"IT, telecom & integration",contactPoint2Text:"From wired and wireless networks to connected systems.",
-contactPoint3:"Contact information",contactPoint3Text:"The official email and phone number will be confirmed before launch.",
-contactFormTitle:"Tell us about your project",contactFormIntro:"Complete the form to prepare a message you can copy into your email application.",
+contactPoint3:"Business inquiries",contactPoint3Text:"Email us directly at the address above, or prepare a message using the form.",
+contactFormTitle:"Tell us about your project",contactFormIntro:"Complete the form to prepare a message to info@exalink.ca. You can review it in your email application before sending.",
 fieldName:"Your name *",fieldCompany:"Company / organization",fieldEmail:"Email address *",fieldPhone:"Phone (optional)",fieldSubject:"Project area *",fieldMessage:"How can we help? *",subjectPlaceholder:"Choose a service",subjectIt:"IT & Networking",subjectTele:"Telecommunications / LTE / 5G / Wi-Fi",subjectSystems:"Smart Systems / IoT / Automation",subjectOther:"Other business technology project",namePlaceholder:"Full name",companyPlaceholder:"Company name",emailPlaceholder:"you@company.com",phonePlaceholder:"Phone number",messagePlaceholder:"Briefly describe your needs, location, current environment and objectives.",
-formSubmit:"Prepare message",formNote:"Preview mode: this form does not send or store your message. It generates text that you can copy. An actual contact form will be configured once the receiving address and hosting are confirmed.",
-formResultTitle:"Your message is ready",formResultIntro:"Nothing has been sent. Copy this draft and paste it into your email application.",
+formSubmit:"Prepare email",formNote:"This preview never sends or saves your message. You will be able to open the draft in your email app, then review and send it yourself.",formOpenEmail:"Open email app ↗",emailHint:"Your email app will open with a draft. Review it, then click Send in your email app to deliver it.",
+formResultTitle:"Your message is ready",formResultIntro:"Nothing has been sent. Open your email app to review and send your message.",
 formCopy:"Copy message",copyDone:"Text copied. No message has been sent.",copyFail:"Select and copy the message manually. No message has been sent.",
 draftSubject:"EXALINK – Business technology inquiry",draftName:"Name",draftCompany:"Company",draftEmail:"Email",draftPhone:"Phone",draftArea:"Project area",draftMessage:"Project details",formError:"Please complete the required fields correctly.",noJs:"JavaScript is required for this draft form. No data is sent from this page."
 };
@@ -47,11 +47,11 @@ contactVisual:"UNE APPROCHE CONNECTÉE",
 contactAsideKicker:"ENTRONS EN CONTACT",contactAsideTitle:"Commençons par vos besoins",contactAsideBody:"Quelques informations sur votre organisation et votre projet suffisent pour entamer un échange technique.",
 contactPoint1:"Projets professionnels et industriels",contactPoint1Text:"Des solutions adaptées aux environnements d’entreprise.",
 contactPoint2:"TI, télécommunications et intégration",contactPoint2Text:"Des réseaux filaires et sans fil aux systèmes connectés.",
-contactPoint3:"Coordonnées",contactPoint3Text:"L’adresse courriel officielle et le téléphone seront confirmés avant le lancement.",
-contactFormTitle:"Décrivez votre projet",contactFormIntro:"Remplissez le formulaire pour préparer un message à copier dans votre application courriel.",
+contactPoint3:"Demandes commerciales",contactPoint3Text:"Écrivez-nous directement à cette adresse ou préparez un message avec le formulaire.",
+contactFormTitle:"Décrivez votre projet",contactFormIntro:"Remplissez le formulaire pour préparer un courriel destiné à info@exalink.ca. Vous pourrez le vérifier avant de l’envoyer.",
 fieldName:"Votre nom *",fieldCompany:"Entreprise / organisation",fieldEmail:"Adresse courriel *",fieldPhone:"Téléphone (facultatif)",fieldSubject:"Domaine du projet *",fieldMessage:"Comment pouvons-nous vous aider ? *",subjectPlaceholder:"Choisir un service",subjectIt:"Informatique et réseaux",subjectTele:"Télécommunications / LTE / 5G / Wi-Fi",subjectSystems:"Systèmes intelligents / IoT / automatisation",subjectOther:"Autre projet technologique",namePlaceholder:"Nom complet",companyPlaceholder:"Nom de l’entreprise",emailPlaceholder:"vous@entreprise.com",phonePlaceholder:"Numéro de téléphone",messagePlaceholder:"Décrivez brièvement vos besoins, votre localisation, l’environnement actuel et vos objectifs.",
-formSubmit:"Préparer le message",formNote:"Mode démonstration : ce formulaire n’envoie ni n’enregistre votre message. Il prépare un texte que vous pourrez copier. Un formulaire d’envoi sera configuré après validation de l’adresse de réception et de l’hébergement.",
-formResultTitle:"Votre message est prêt",formResultIntro:"Aucun message n’a été envoyé. Copiez ce brouillon dans votre application courriel.",
+formSubmit:"Préparer le courriel",formNote:"Cette version de démonstration n’envoie ni n’enregistre votre message. Vous pourrez ouvrir le brouillon dans votre application courriel, puis vérifier et envoyer le message vous-même.",formOpenEmail:"Ouvrir la messagerie ↗",emailHint:"Un brouillon s’ouvrira dans votre application courriel. Vérifiez-le, puis cliquez sur Envoyer pour le transmettre.",
+formResultTitle:"Votre message est prêt",formResultIntro:"Aucun message n’a été envoyé. Ouvrez votre application courriel pour vérifier et envoyer le message.",
 formCopy:"Copier le message",copyDone:"Texte copié. Aucun message n’a été envoyé.",copyFail:"Sélectionnez et copiez le texte manuellement. Aucun message n’a été envoyé.",
 draftSubject:"EXALINK – Demande de renseignements professionnels",draftName:"Nom",draftCompany:"Entreprise",draftEmail:"Courriel",draftPhone:"Téléphone",draftArea:"Domaine du projet",draftMessage:"Description du projet",formError:"Veuillez remplir correctement les champs obligatoires.",noJs:"JavaScript est nécessaire pour préparer le message. Aucune donnée n’est envoyée depuis cette page."
 };
@@ -84,7 +84,12 @@ if(page==="contact"){
    if(!form.reportValidity())return;
    const t=copy(),val=id=>document.getElementById(id).value.trim();
    const subject=form.querySelector("#field-subject").selectedOptions[0].textContent;
-   const text=[t.draftSubject,"",t.draftName+": "+val("field-name"),t.draftCompany+": "+val("field-company"),t.draftEmail+": "+val("field-email"),t.draftPhone+": "+val("field-phone"),t.draftArea+": "+subject,"",t.draftMessage+":","",val("field-message")].join("\n");
+   const text=[t.draftName+": "+val("field-name"),t.draftCompany+": "+val("field-company"),t.draftEmail+": "+val("field-email"),t.draftPhone+": "+val("field-phone"),t.draftArea+": "+subject,"",t.draftMessage+":","",val("field-message")].join("\n");
+   const subjectLine=t.draftSubject+" – "+subject;
+   const mailto="mailto:info@exalink.ca?subject="+encodeURIComponent(subjectLine)+"&body="+encodeURIComponent(text);
+   const emailLink=document.getElementById("open-email");
+   if(mailto.length<=1800){emailLink.href=mailto;emailLink.hidden=false;document.getElementById("email-hint").textContent=t.emailHint;}
+   else{emailLink.removeAttribute("href");emailLink.hidden=true;document.getElementById("email-hint").textContent=active==="fr"?"Message long : copiez le texte dans votre application courriel pour éviter qu’il soit tronqué.":"Long message: copy the text into your email app to avoid truncation.";}
    output.textContent=text;result.hidden=false;
    result.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"nearest"});
  });
