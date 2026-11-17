@@ -22,7 +22,7 @@
 <div class="contact-points">
 <div class="contact-point"><strong data-i18n="contactPoint1">Business &amp; industrial projects</strong><p data-i18n="contactPoint1Text"></p></div>
 <div class="contact-point"><strong data-i18n="contactPoint2">IT, telecom &amp; integration</strong><p data-i18n="contactPoint2Text"></p></div>
-<div class="contact-point"><strong data-i18n="contactPoint3">Contact information</strong><p data-i18n="contactPoint3Text"></p></div>
+<div class="contact-point contact-point-email"><strong data-i18n="contactPoint3">Business inquiries</strong><a class="contact-email-link" href="mailto:info@exalink.ca">info@exalink.ca</a><p data-i18n="contactPoint3Text">Send us an email directly, or use the form to prepare your message.</p></div>
 </div></aside>
 <div>
 <form id="contact-form" class="contact-form"><h2 data-i18n="contactFormTitle">Tell us about your project</h2><p data-i18n="contactFormIntro">Complete the form to prepare a message you can copy into your email application.</p>
@@ -37,8 +37,11 @@
 <div class="form-field full"><label for="field-message" data-i18n="fieldMessage">How can we help? *</label><textarea id="field-message" name="message" required maxlength="4000" minlength="12" data-placeholder="messagePlaceholder"></textarea></div></div>
 <p class="form-helper" data-i18n="formNote">Preview mode: this form does not send or store your message.</p>
 <div class="form-actions"><button class="form-submit" type="submit" data-i18n="formSubmit">Prepare message</button></div>
-<div class="form-result" id="draft-result" hidden role="status"><h3 data-i18n="formResultTitle">Your message is ready</h3><p data-i18n="formResultIntro">Nothing has been sent.</p>
-<pre id="draft-text"></pre><button class="copy-draft" id="copy-draft" type="button" data-i18n="formCopy">Copy message</button><p id="copy-status" class="form-copy-status" aria-live="polite"></p></div>
+<div class="form-result" id="draft-result" hidden role="status"><h3 data-i18n="formResultTitle">Your message is ready</h3><p data-i18n="formResultIntro">Nothing has been sent. Open your email app to review and send your message.</p>
+<pre id="draft-text"></pre>
+<div class="draft-actions"><a id="open-email" class="draft-mailto" href="mailto:info@exalink.ca" data-i18n="formOpenEmail">Open email app ↗</a><button class="copy-draft" id="copy-draft" type="button" data-i18n="formCopy">Copy message</button></div>
+<p id="email-hint" class="form-copy-status" data-i18n="emailHint">Your email app will open with a draft. Review and click Send there to deliver it.</p>
+<p id="copy-status" class="form-copy-status" aria-live="polite"></p></div>
 </form><noscript><p class="no-js-note" data-i18n="noJs">JavaScript is required for this draft form. No data is sent from this page.</p></noscript>
 </div></div></section>
 </main>
