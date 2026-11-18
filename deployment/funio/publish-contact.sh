@@ -35,7 +35,9 @@ chmod 0700 "$BACKUP"
 TMPDIR="$(mktemp -d "$PRIVATE/.publish_contact.XXXXXXXX")"
 trap 'rm -rf "$TMPDIR"' EXIT
 mkdir "$TMPDIR/api"
-sed 's/data-contact-mode="draft"/data-contact-mode="smtp"/' "$SOURCE/contact.html" > "$TMPDIR/contact.html"
+sed -e 's/data-contact-mode="draft"/data-contact-mode="smtp"/' \
+    -e 's/contact-delivery.js?v=2/contact-delivery.js?v=3/' \
+    "$SOURCE/contact.html" > "$TMPDIR/contact.html"
 cp "$SOURCE/contact-delivery.js" "$TMPDIR/contact-delivery.js"
 
 cat > "$TMPDIR/api/csrf.php" <<'PHP'
