@@ -119,7 +119,7 @@ if (!is_readable((string) $settings['autoload'])) {
 }
 require_once (string) $settings['autoload'];
 require_once __DIR__ . '/rate-limit.php';
-enforce_rate_limit(dirname($configurationPath), $now);
+enforce_rate_limit(dirname($configurationPath), $now, (string) $settings['smtp_password']);
 try {
     $mail = new PHPMailer\PHPMailer\PHPMailer(true);
     $mail->isSMTP();
