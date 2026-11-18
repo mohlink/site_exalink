@@ -64,7 +64,7 @@ if (!is_string($token) || !is_string($expected) || !hash_equals($expected, $toke
     || $started === 0 || $now - $started < 3 || $now - $started > 7200) {
     response(403, ['ok' => false, 'error' => 'expired_or_invalid_session']);
 }
-if (!empty($data['website'])) {
+if (!isset($data['website']) || !is_string($data['website']) || trim($data['website']) !== '') {
     response(400, ['ok' => false, 'error' => 'invalid_request']);
 }
 if ($now - (int) ($_SESSION['last_contact_sent'] ?? 0) < 60) {
@@ -118,6 +118,8 @@ if (!is_readable((string) $settings['autoload'])) {
     response(503, ['ok' => false, 'error' => 'mail_not_configured']);
 }
 require_once (string) $settings['autoload'];
+require_once __DIR__ . '/rate-limit.php';
+enforce_rate_limit(dirname($configurationPath), $now);
 try {
     $mail = new PHPMailer\PHPMailer\PHPMailer(true);
     $mail->isSMTP();
