@@ -21,6 +21,7 @@
       send:"Send message securely",sending:"Sending…",
       sent:"Your inquiry has been submitted successfully. Thank you for contacting EXALINK.",
       failed:"We could not confirm delivery. Please contact info@exalink.ca directly. If you already submitted, check before sending again to avoid duplicates.",
+      rateLimited:"Too many requests. Please wait before submitting another message.",
       unavailable:"Online sending is not available yet. You can email info@exalink.ca directly.",
     },
     fr:{
@@ -96,7 +97,7 @@
         phone:field("field-phone"),
         subject:field("field-subject"),
         message:field("field-message"),
-        website:""
+        website:document.getElementById("field-website")?.value.trim()||""
       };
       const response=await fetch("api/contact.php",{
         method:"POST",credentials:"same-origin",
@@ -105,14 +106,14 @@
       });
       const reply=await response.json().catch(()=>null);
       if(!response.ok || !reply || reply.ok!==true || reply.message!=="sent"){
-        throw Error(reply&&reply.error?reply.error:"Delivery not confirmed");
+        throw Error(response.status===429?"slow_down":reply&&reply.error?reply.error:"Delivery not confirmed");
       }
       readyToken=null;tokenAt=0;
       form.reset();
       showStatus(t().sent,"success");
     }catch(err){
       const offline=err&&(/Token unavailable|Invalid token/.test(err.message));
-      showStatus(offline?t().unavailable:t().failed,"error");
+      showStatus(err?.message==="slow_down"?t().rateLimited:offline?t().unavailable:t().failed,"error");
     }finally{
       busy=false;
       submitButton.disabled=false;
