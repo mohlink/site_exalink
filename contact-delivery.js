@@ -7,7 +7,7 @@
   const form=document.getElementById("contact-form");
   if(!form)return;
   const live=document.body.dataset.contactMode==="smtp" &&
-    location.protocol==="https:" && !/(^|\.)github\.io$/i.test(location.hostname);
+    location.protocol==="https:" && /^(www\.)?exalink\.ca$/i.test(location.hostname);
   if(!live)return;
 
   const submitButton=form.querySelector('button[type="submit"]');
@@ -31,6 +31,7 @@
       send:"Envoyer le message",sending:"Envoi en cours…",
       sent:"Votre demande a été transmise avec succès. Merci d'avoir contacté EXALINK.",
       failed:"Nous n'avons pas pu confirmer la réception. Vous pouvez écrire à info@exalink.ca. Si vous venez de soumettre une demande, vérifiez avant de réessayer pour éviter un doublon.",
+      rateLimited:"Trop de demandes. Veuillez patienter avant d’envoyer un autre message.",
       unavailable:"L'envoi en ligne n'est pas encore disponible. Vous pouvez écrire directement à info@exalink.ca.",
     }
   };
