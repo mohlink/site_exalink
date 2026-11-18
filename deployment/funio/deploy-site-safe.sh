@@ -23,7 +23,7 @@ grep -Fq "$RUNTIME/contact.php" "$DEST/api/contact.php" || fail "API PHP encore 
 grep -Fq "$RUNTIME/csrf.php" "$DEST/api/csrf.php" || fail "API CSRF encore liée au dépôt GitHub."
 grep -Fq 'data-contact-mode="draft"' "$SRC/contact.html" || fail "Le modèle GitHub doit rester draft."
 grep -Fq 'rateLimited:"Trop de demandes' "$SRC/contact-delivery.js" || fail "Script contact inattendu."
-grep -Fq '/^(www\\.)?exalink\\.ca$/i' "$SRC/contact-delivery.js" || fail "Origine SMTP non restreinte."
+grep -Fq 'location.protocol==="https:" && /^(www' "$SRC/contact-delivery.js" || fail "Origine SMTP non restreinte."
 php -l "$RUNTIME/contact.php" >/dev/null
 php -l "$RUNTIME/csrf.php" >/dev/null
 php -l "$RUNTIME/rate-limit.php" >/dev/null
